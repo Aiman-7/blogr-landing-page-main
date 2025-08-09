@@ -81,4 +81,3 @@ In the future, I plan to:
 
 - Add JavaScript functionality for the mobile menu toggle.
 - Implement smooth dropdown animations for navigation menus.
-```
