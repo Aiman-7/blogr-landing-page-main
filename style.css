@@ -1,0 +1,975 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    background-image: url('./images/bg-pattern-intro-desktop.svg'), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-position: center;
+    border-bottom-left-radius: 110px;
+    height: 500px;
+    width: 100%;
+}
+
+
+/* Navbar */
+
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.5fr;
+    column-gap: 3rem;
+    height: 100px;
+    width: 100%;
+}
+
+.navbar-logo {
+    justify-self: end;
+    align-self: center;
+}
+
+.navbar-links {
+    align-self: center;
+}
+
+.navbar-links ul {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr;
+    column-gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-links ul li {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(250, 233, 233);
+    cursor: pointer;
+}
+
+.navbar-links ul li:hover {
+    text-decoration: underline;
+}
+
+.navbar-buttons {
+    align-self: center;
+}
+
+.navbar-buttons a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    margin-right: 1.5rem;
+}
+
+.navbar-buttons button {
+    font-size: 1rem;
+    border: none;
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+    font-weight: 600;
+    padding: 0.9rem 2.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.navbar-buttons button:hover {
+    background-color: hsl(355, 100%, 74%);
+    color: white;
+}
+
+
+/* Header Content */
+
+
+.header-content {
+    margin-top: 3.4rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    font-weight: 200;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    animation-delay: 0.4s;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.header-buttons.anim {
+    animation-delay: 0.7s;
+}
+
+.header-buttons button {
+    padding: 0.9rem 1rem;
+    border: none;
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header-buttons :nth-child(2) {
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.header-buttons :nth-child(1):hover {
+    background-color: hsl(355, 100%, 74%);
+    color: white;
+}
+
+.header-buttons :nth-child(2):hover {
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* Main Section */
+
+
+
+/* First Main */
+
+.main-first {
+    margin-top: 1.2rem;
+}
+
+.main-first h2 {
+    text-align: center;
+    position: relative;
+    top: 6rem;
+    color: hsl(208, 49%, 24%);
+    font-size: 2rem;
+    font-family: 'Overpass', sans-serif;
+}
+
+.main-first-content {
+    display: flex;
+    gap: 7.5rem;
+    justify-content: end;
+}
+
+.first-content-text {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-content-text h3 {
+    color: hsl(208, 49%, 24%);
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.first-content-text p {
+    color: hsl(207, 13%, 34%);
+    padding-top: 1rem;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6rem;
+}
+
+.first-content-img {
+    width: 45%;
+    overflow: hidden;
+
+    opacity: 0;
+    scale: 0.4;
+    animation: first-img-animation linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+.first-content-img img {
+    height: 730px;
+    position: relative;
+    right: -4.5rem;
+}
+
+@keyframes first-img-animation {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+/* Second Main */
+
+
+
+.main-second {
+    background-image: url("./images/bg-pattern-circles.svg"), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 31%));
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    height: 330px;
+    margin-top: 2.5rem;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.main-second-content {
+    height: 330px;
+    display: flex;
+    gap: 5rem;
+
+}
+
+.second-content-img {
+    width: 40%;
+    animation: second-img-animation 1.2s linear infinite alternate;
+}
+
+.second-content-img img {
+    width: 85%;
+    position: relative;
+    bottom: 3rem;
+    left: 7rem;
+}
+
+.second-content-text {
+    align-self: center;
+    width: 33%;
+    color: white;
+}
+
+.second-content-text h2 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.second-content-text p {
+    padding-top: 1.2rem;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    color: rgb(196, 196, 196);
+}
+
+@keyframes second-img-animation{
+    to{
+          transform: translateY(30px);       
+    }
+}
+
+
+
+/* Third Main */
+
+
+
+.main-third {
+    margin-top: 3rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.third-content-text {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.third-content-text h3 {
+    color: hsl(208, 49%, 24%);
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.third-content-text p {
+    color: hsl(207, 13%, 34%);
+    padding-top: 1.1rem;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+
+.third-content-img {
+    width: 50%;
+    overflow: hidden;
+
+    opacity: 0;
+    scale: 0.4;
+    animation: moveright 0.5s linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+
+}
+
+.third-content-img img {
+    height: 750px;
+    position: relative;
+    left: -16.5rem;
+}
+
+@keyframes moveright {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+/* Footer Section */
+
+
+.footer {
+    height: 310px;
+    background-color: hsl(240, 10%, 16%);
+    border-top-right-radius: 100px;
+    margin-top: 7rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    height: 250px;
+    width: 70%;
+    margin: 0 auto;
+    align-content: center;
+
+    transform: translateY(-80px);
+    animation: footer-moveup 0.5s linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+.footer-logo {
+    text-align: center;
+    justify-self: start;
+}
+
+.footer-options {
+    justify-self: start;
+}
+
+.footer-options p {
+    cursor: pointer;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.footer-options ul {
+    margin-top: 1.5rem;
+}
+
+.footer-options li {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.3rem 0;
+    color: rgb(163, 163, 163);
+    font-size: 0.9rem;
+}
+
+.footer-options li:hover {
+    text-decoration: underline;
+}
+
+
+@keyframes footer-moveup{
+    to{
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+/* Responsiveness */
+
+
+@media screen and (max-width:1200px) {
+
+    .main-first h2 {
+        top: 5rem;
+    }
+
+    .main-first-content {
+        gap: 3rem;
+    }
+
+    .first-content-img {
+        width: 48%;
+    }
+
+    .first-content-img img {
+        height: 680px;
+        right: -2.2rem;
+    }
+
+    .first-content-text {
+        width: 43%;
+        gap: 2.5rem;
+    }
+
+
+    .main-second {
+        height: 310px;
+    }
+
+    .second-content-img img {
+        width: 93%;
+        bottom: 2rem;
+        left: 6rem;
+    }
+
+    .second-content-text {
+        align-self: center;
+        width: 41%;
+        color: white;
+    }
+
+
+    .main-third {
+        margin-top: 6rem;
+        gap: 2.5rem;
+    }
+
+    .third-content-text {
+        width: 38%;
+        gap: 3rem;
+    }
+
+    .third-content-img {
+        width: 53%;
+    }
+
+    .third-content-img img {
+        height: 690px;
+        left: -15.2rem;
+    }
+
+    .third-content-text p {
+        padding-top: 0.9rem;
+    }
+
+
+    .footer-content {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .navbar {
+        column-gap: 2rem;
+    }
+
+    .navbar-links ul {
+        column-gap: 2rem;
+    }
+
+    .navbar-links ul li {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .navbar-buttons a {
+        font-size: 0.8rem;
+        margin-right: 1.2rem;
+    }
+
+    .navbar-buttons button {
+        font-size: 0.9rem;
+        padding: 0.8rem 2.1rem;
+    }
+
+    .header-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .header-buttons button {
+        padding: 0.8rem 1rem;
+    }
+
+
+    .main-first {
+        margin-top: 2rem;
+    }
+
+    .main-first h2 {
+        font-size: 1.8rem;
+        top: 3.5rem;
+
+    }
+
+    .main-first-content {
+        gap: 0rem;
+    }
+
+    .first-content-img {
+        width: 50%;
+    }
+
+    .first-content-img img {
+        height: 550px;
+        right: -1.5rem;
+    }
+
+    .first-content-text {
+        width: 45%;
+        gap: 2.5rem;
+    }
+
+    .first-content-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .first-content-text p {
+        padding-top: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+
+    .main-second {
+        height: 280px;
+    }
+
+    .second-content-img img {
+        width: 100%;
+        bottom: 2rem;
+        left: 4rem;
+    }
+
+    .second-content-text {
+        width: 48%;
+    }
+
+    .second-content-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .second-content-text p {
+        padding: 1.5rem 0;
+        font-size: 0.7rem;
+    }
+
+
+    .main-third {
+        gap: 1rem;
+    }
+
+    .third-content-text {
+        width: 45%;
+        gap: 2rem;
+    }
+
+    .third-content-img {
+        width: 51%;
+    }
+
+    .third-content-img img {
+        height: 550px;
+        left: -12.1rem;
+    }
+
+    .third-content-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .third-content-text p {
+        padding-top: 0.8rem;
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+}
+
+
+@media screen and (max-width:850px) {
+
+
+    .first-content-img {
+        width: 50%;
+    }
+
+    .first-content-img img {
+        height: 530px;
+        right: -1rem;
+    }
+
+    .first-content-text {
+        width: 47%;
+        gap: 2.3rem;
+    }
+
+    .first-content-text p {
+        padding-top: 0.7rem;
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+
+    .main-second {
+        height: 260px;
+    }
+
+    .second-content-img img {
+        width: 100%;
+        bottom: 1.5rem;
+        left: 3rem;
+    }
+
+    .second-content-text {
+        width: 48%;
+    }
+
+    .second-content-text p {
+        padding: 1.5rem 0 3.5rem 0;
+    }
+
+    .third-content-img {
+        width: 51%;
+    }
+
+    .third-content-img img {
+        height: 510px;
+        left: -11.9rem;
+    }
+
+    .third-content-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .third-content-text p {
+        padding-top: 0.6rem;
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
+
+
+    header {
+        height: 447px;
+    }
+
+    .navbar {
+        grid-template-columns: 150px auto 50px;
+        height: 90px;
+    }
+
+    .navbar-logo {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .navbar-links {
+        justify-items: end;
+        grid-column: 3/4;
+    }
+
+    .navbar-links ul {
+        grid-template-columns: 50px;
+    }
+
+    .navbar-links ul li {
+
+        background-image: url("./images/icon-hamburger.svg");
+        background-size: cover;
+        width: 32px;
+        height: 20px;
+    }
+
+    .navbar-links ul li:nth-child(1) div {
+        display: none;
+    }
+
+    .navbar-links ul li:nth-child(1) p {
+        display: none;
+    }
+
+    .navbar-links ul li:nth-child(2) {
+        display: none;
+    }
+
+    .navbar-links ul li:nth-child(3) {
+        display: none;
+    }
+
+    .navbar-buttons {
+        display: none;
+    }
+
+    .header-content {
+        width: 80%;
+        margin: 3.4rem auto 0 auto;
+    }
+
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .header-buttons button {
+        padding: 0.8rem 1rem;
+    }
+
+
+    .main-first {
+        margin-top: 5.5rem;
+    }
+
+    .main-first-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .main-first h2 {
+        position: static;
+        font-size: 1.5rem;
+    }
+
+    .first-content-text {
+        width: 70%;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .first-content-img {
+        width: 60%;
+        margin-top: 3rem;
+    }
+
+    .first-content-img img {
+        height: auto;
+        position: static;
+        width: 100%;
+    }
+
+
+    .main-second {
+        height: 460px;
+        background-position: bottom;
+        margin-top: 11rem;
+    }
+
+    .main-second-content {
+        height: 460px;
+        flex-direction: column;
+        gap: 0rem;
+        justify-content: center;
+    }
+
+    .second-content-img {
+        width: 60%;
+        margin: -6rem auto 0 auto;
+    }
+
+    .second-content-img img {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .second-content-text {
+        text-align: center;
+        width: 70%;
+    }
+
+    .second-content-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .second-content-text p {
+        padding-top: 0.8rem;
+        line-height: 1.4rem;
+    }
+
+
+    .main-third {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3.5rem;
+    }
+
+    .third-content-img {
+        width: 70%;
+    }
+
+    .third-content-img img {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .third-content-text {
+        width: 70%;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .third-content-text h3 {
+        font-size: 1.3rem;
+    }
+
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        height: auto;
+        margin: 3rem auto;
+    }
+
+    .footer-logo {
+        justify-self: center;
+    }
+
+    .footer-options {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .footer-options p {
+        padding-top: 1.5rem;
+    }
+
+    .footer-options li {
+        padding: 0.2rem 0 0.5rem 0;
+    }
+}
+
+
+
+@media screen and (max-width:480px) {
+
+    header {
+        height: 500px;
+    }
+
+    .navbar-links ul li {
+        width: 30px;
+        height: 18px;
+    }
+
+    .header-content {
+        width: 90%;
+        margin: 3.4rem auto 0 auto;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-buttons button {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+
+
+    .main-first {
+        margin-top: 5.5rem;
+    }
+
+    .main-first-content {
+        gap: 1.5rem;
+    }
+
+    .first-content-text {
+        width: 75%;
+        gap: 2rem;
+    }
+
+    .first-content-img {
+        width: 80%;
+        margin-top: 1.5rem;
+    }
+
+    .main-second {
+        margin-top: 8rem;
+    }
+
+    .second-content-img {
+        width: 75%;
+    }
+
+    .second-content-text {
+        width: 75%;
+    }
+
+    .second-content-text h2 {
+        font-size: 1.6rem;
+    }
+
+
+
+    .main-third {
+        gap: 1.5rem;
+    }
+
+    .third-content-img {
+        width: 78%;
+    }
+
+    .third-content-text {
+        width: 75%;
+    }
+
+
+    .footer {
+        margin-top: 5rem;
+    }
+}
